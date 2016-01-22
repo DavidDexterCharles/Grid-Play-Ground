@@ -6,35 +6,77 @@
 
 
         <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/css/semantic.min.css'>
+        <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/icon.min.css'>
+        <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/colorize.js'>
+
+        <style>
+
+            .domargin {
+                border:1px solid red;
+                margin-top: 100px;
+                margin-bottom: 100px;
+                margin-right: 150px;
+                margin-left: 80px;
+            }
+            .ui.container.segment {
+
+                margin-top: 30px;
+                margin-bottom: 100px;
+             color:red;
+                /*margin-right: 150px;*/
+                /*margin-left: 80px;*/
+            }
+        </style>
+
+
+
     </head>
     <body>
 
 
+        <div class="ui container  ">
+            <div class="ui segment">
+                <div class="ui  secondary fixed top menu row "  >
 
-
-        <div class="ui grid container ">
-            <div class="column">
-                <div class="ui segment">
-                    <div class="ui menu top">
-                        <a class="active item" data-tab="edit"><i class="icon edit sign"></i>Edit</a>
-                        <a class="item" data-tab="summary">Summary</a>
+                    <a class="active item" data-tab="Home"><i class=" home icon "></i>Home</a>
+                    <a class="item" data-tab="profile"><i class="user icon"></i> Profile</a>
+                    <a class="item" data-tab="browse"><i class="grid layout icon"></i>Browse</a>
+                    <div class="right menu">
+                        <a class="item" data-tab="messages"><i class="mail outline icon"></i>Messages<div class="floating ui red label">8</div></a>
+                        <a class="item" data-tab="notifications"><i class="alarm icon"></i>Notifications<div class="floating ui red label">15</div></a>
                     </div>
-
-                    <div class="ui tab" data-tab="edit">
-                        <div class="ui form">
-                            <div class="two fields">
-                                <div class="field"><label>First Name</label><input type="text" /></div>
-                                <div class="field"><label>Last Name</label><input type="text" /></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ui tab" data-tab="summary">
-                        Other content
-                    </div>
-
                 </div>
             </div>
         </div>
+
+
+
+
+    <div class="domargin">
+            <div class="ui tab" data-tab="Home">
+                <div class="ui form">
+                    <div class="two fields">
+                        <div class="field"><label>First Name</label><input type="text" /></div>
+                        <div class="field"><label>Last Name</label><input type="text" /></div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui tab" data-tab="profile">
+                Other content
+            </div>
+            <div class="ui tab" data-tab="browse">
+                Browse content
+            </div>
+            <div class="ui tab" data-tab="messages">
+                Other content
+            </div>
+            <div class="ui tab" data-tab="notifications">
+                notification content
+            </div>
+
+    </div>
+
+
 
 
 
