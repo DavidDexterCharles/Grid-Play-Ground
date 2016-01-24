@@ -2,7 +2,7 @@
 <project version="4">
   <component name="PublishConfigData">
     <serverData>
-      <paths name="Xampp PHP">
+      <paths name="XAMPP Server">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />

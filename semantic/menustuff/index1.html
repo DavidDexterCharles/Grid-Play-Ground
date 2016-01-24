@@ -1,101 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Navbar</title>
+<head>
+    <meta charset="UTF-8">
+    <title>Navbar</title>
 
 
-        <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/css/semantic.min.css'>
-        <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/icon.min.css'>
-        <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/colorize.js'>
-
-        <style>
-
-            .domargin {
-                border:1px solid red;
-                margin-top: 100px;
-                margin-bottom: 100px;
-                margin-right: 150px;
-                margin-left: 80px;
-            }
-            .ui.container.segment {
-
-                margin-top: 30px;
-                margin-bottom: 100px;
-             color:red;
-                /*margin-right: 150px;*/
-                /*margin-left: 80px;*/
-            }
-        </style>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css'>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/icon.min.css'>
 
 
+    <style>
 
-    </head>
-    <body>
+        .domargin {
+            /*border:1px solid red;*/
+            margin-top: 100px;
+            /*margin-bottom: 100px;*/
+            margin-right: 150px;
+            margin-left: 80px;
+        }
+        .ui.container.segment {
+
+            margin-top: 30px;
+            /*margin-bottom: 100px;*/
+            /*color:red;*/
+            margin-right: 150px;
+            margin-left: 80px;
+        }
+        .ui.secondary.menu{background-color:#F8F8F8 ;}
+    </style>
 
 
-        <div class="ui container  ">
-            <div class="ui segment">
-                <div class="ui  secondary fixed top menu row "  >
 
-                    <a class="active item" data-tab="Home"><i class=" home icon "></i>Home</a>
-                    <a class="item" data-tab="profile"><i class="user icon"></i> Profile</a>
-                    <a class="item" data-tab="browse"><i class="grid layout icon"></i>Browse</a>
-                    <div class="right menu">
-                        <a class="item" data-tab="messages"><i class="mail outline icon"></i>Messages<div class="floating ui red label">8</div></a>
-                        <a class="item" data-tab="notifications"><i class="alarm icon"></i>Notifications<div class="floating ui red label">15</div></a>
-                    </div>
+</head>
+<body>
+
+
+
+<div class="ui container ">
+    <div class="ui segment">
+        <div class="ui secondary fixed top menu teal row" >
+            <div class="ui container segment grid content">
+                <a data-tab="Home" class="item" href="#"><i class="home icon"></i>Home </a>
+                <a data-tab="profile" class="item" href="#"><i class="user icon"></i> Profile</a>
+                <!-- <a class="item"><i class="settings icon"></i> Settings</a> -->
+                <a data-tab="browse" class="item" href="#"><i class="grid layout icon"></i>Browse </a>
+                <div class="right menu">
+                    <a href="#" data-tab="messages" class="item"><i class="mail outline icon"></i>Messages<div class="floating ui red label">8</div> </a>
+                    <a href="#" data-tab="notifications" class="item"><i class="alarm outline icon"></i>Notifications<div class="floating ui red label">15</div></a>
+                    <!-- <div class="movedown20px ui container  "> -->
+                    <a href="#" class=" item ui   large   label"><i class="teal  sign out icon"></i>Log Out</a>
+                    <!-- </div> -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="domargin">
+    <div class="ui tab" data-tab="Home">
+        <div class="ui form">
+            <div class="two fields">
+                <div class="field"><label>First Name</label><input type="text" /></div>
+                <div class="field"><label>Last Name</label><input type="text" /></div>
+            </div>
+        </div>
+    </div>
+    <div class="ui tab" data-tab="profile">
+        <div class="ui grid">
+            <div class="four wide column">
+                <div class="ui vertical fluid tabular menu">
+                    <a class="item">
+                        <span style="color:teal;"><img class="ui avatar image" src="http://media.salon.com/2013/09/moon.jpg"> David Charles</span>
+
+
+                    </a>
+                    <a class="item">
+                       <span style="color:teal;"><i class="star icon"></i> Favourites</span>
+                    </a>
+                    <a class="item active">
+                      <span style="color:teal;"><i class="cubes icon"></i>  Groups</span>
+                    </a>
+                    <a class="item">
+                        <span style="color:teal;"><i class="shop icon"></i>Stores</span>
+                    </a>
+                    <a class="item">
+                         <span style="color:teal;"><i class="add user icon"></i>Followers</span>
+                    </a>
+                    <a class="item">
+                         <span style="color:teal;"><i class="sitemap icon"></i>Following</span>
+                    </a>
+                </div>
+            </div>
+            <div class="twelve wide stretched column">
+                <div class="ui fluid small icon input">
+                    <input type="text" placeholder="Search small...">
+                    <i class="circular search link icon"></i>
+                </div>
+                <div class="ui segment">
+                    <p>This is an stretched grid column. This segment will always match the tab height</p>
+                    <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p> <p>This is an stretched grid column. This segment will always match the tab height</p>
                 </div>
             </div>
         </div>
-
-
-
-
-    <div class="domargin">
-            <div class="ui tab" data-tab="Home">
-                <div class="ui form">
-                    <div class="two fields">
-                        <div class="field"><label>First Name</label><input type="text" /></div>
-                        <div class="field"><label>Last Name</label><input type="text" /></div>
-                    </div>
-                </div>
-            </div>
-            <div class="ui tab" data-tab="profile">
-                Other content
-            </div>
-            <div class="ui tab" data-tab="browse">
-                Browse content
-            </div>
-            <div class="ui tab" data-tab="messages">
-                Other content
-            </div>
-            <div class="ui tab" data-tab="notifications">
-                notification content
-            </div>
-
+    </div>
+    <div class="ui tab" data-tab="browse">
+        Browse content
+    </div>
+    <div class="ui tab" data-tab="messages">
+        Other content
+    </div>
+    <div class="ui tab" data-tab="notifications">
+        notification content
     </div>
 
+</div>
 
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js'></script>
 
+<script src='http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/javascript/semantic.min.js'></script>
 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/colorize.js'></script>
+<script src="index1.js">
 
+    //put this in index1.js
+    // $(document).ready(function(){
+    //     $('.top.menu .item').tab();
+    // });
 
+</script>
 
-
-
-
-
-
-
-
-
-
-
-        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-        <script src='http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/javascript/semantic.min.js'></script>
-        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js'></script>
-        <script src="index1.js"></script>
-
-    </body>
+</body>
 </html>
