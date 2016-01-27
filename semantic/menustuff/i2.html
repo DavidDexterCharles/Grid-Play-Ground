@@ -31,51 +31,22 @@
 
 </head>
 
-<body>
-<div class="ui segment">
-    <div class="ui secondary fixed top menu teal " >
-        <div class="ui container segment grid content">
-            <a data-tab="Home" class="item" href="#"><i class="home icon"></i>Home </a>
-            <a data-tab="profile" class="item" href="#"><i class="user icon"></i> Profile</a>
-            <!-- <a class="item"><i class="settings icon"></i> Settings</a> -->
-            <a data-tab="browse" class="item" href="#"><i class="grid layout icon"></i>Browse </a>
-            <div class="right menu">
-                <a href="#" data-tab="messages" class="item"><i class="mail outline icon"></i>Messages<div class="floating ui red label">8</div> </a>
-                <a href="#" data-tab="notifications" class="item"><i class="alarm outline icon"></i>Notifications<div class="floating ui red label">15</div></a>
-                <!-- <div class="movedown20px ui container  "> -->
-                <a href="#" class=" item ui   large   label"><i class="teal  sign out icon"></i>Log Out</a>
-                <!-- </div> -->
-            </div>
-        </div>
+<body >
+<div class="ui segment sticky" id="#top-menu">
 
-    </div>
+
 </div>
 
-<div><hr></div> <br><br><br>
-
-<div class="ui grid  container do2">
-    <div class="four wide column">A</div>
-    <div class="four wide column">B</div>
-    <div class="four wide column">C</div>
-    <div class="four wide column">D</div>
-    <div class="four wide column">E</div>
-    <div class="four wide column">F</div>
-    <div class="four wide column">G</div>
-    <div class="four wide column">H</div>
-</div>
-
-<div><hr></div> <br><br><br>
 
 
-<div class="ui segment do" id="example2">
-    <div class="ui left close rail">
+
+<div class="ui segment do" >
+    <div class="ui left close rail" >
 
 
-        <div class="ui vertical fluid tabular menu sticky">
+        <div class="ui vertical fluid tabular menu" id='cust-sticky'>
             <a class="item">
                 <span style="color:teal;"><img class="ui avatar image" src="http://media.salon.com/2013/09/moon.jpg"> David Charles</span>
-
-
             </a>
             <a class="item">
                 <span style="color:teal;"><i class="star icon"></i> Favourites</span>
@@ -119,20 +90,40 @@
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
 
-<script src="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/javascript/semantic.min.js"></script>
+<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/javascript/semantic.min.js"></script>-->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/colorize.js"></script>
-<script src="stick.js"></script>
+<!--<script src="stick.js"></script>-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/sticky.js"></script>
 
 
 <script>
-    $('.ui.sticky')
-            .sticky({
-                context: '#example2',
-                pushing: true
-            })
-    ;
+
+    var menu;
+    var height;
+    var thing;
+    var scroll = 0;
+    var offset = 10;
+    $(window).ready(function(){
+      menu = $('#top-menu');
+      thing = $('#cust-sticky');
+      thing.css('position','absolute');
+      height = menu.height();
+      thing.css('top',(height + offset)+'px');
+      var fun = function(){
+          height = menu.height();
+          thing.css('top',(height + offset)+'px');
+      };
+
+      $(window).resize(fun);
+
+      $(window).scroll(function(event){
+        var scrolltop = $(window).scrollTop();
+        if(scrolltop > height + offset){
+          thing.css('top',(scrolltop+offset)+'px');
+        }
+      });
+    });
 
 </script>
 

@@ -39,7 +39,7 @@
 
 <div class="ui container ">
     <div class="ui segment">
-        <div class="ui secondary fixed top menu teal row" >
+        <div class="ui secondary fixed top menu teal row" id='top-menu'>
             <div class="ui container segment grid content">
                 <a data-tab="Home" class="item" href="#"><i class="home icon"></i>Home </a>
                 <a data-tab="profile" class="item" href="#"><i class="user icon"></i> Profile</a>
@@ -69,7 +69,7 @@
         <div class="ui tab" data-tab="profile" id="example2">
             <div class="ui grid" >
                 <div class="four wide column sticky">
-                    <div class="ui vertical fluid tabular menu">
+                    <div class="ui vertical fluid tabular menu" id='cust-sticky'>
                         <a class="item">
                             <span style="color:teal;"><img class="ui avatar image" src="http://media.salon.com/2013/09/moon.jpg"> David Charles</span>
 
@@ -92,7 +92,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="twelve wide stretched column">
+                <div class="twelve wide stretched column" id='search-bar'>
                     <div class="ui fluid small icon input">
                         <input type="text" placeholder="Search small...">
                         <i class="circular search link icon"></i>
@@ -131,12 +131,43 @@
 
 
 <script>
-    $('.ui.sticky')
-            .sticky({
-                context: '#example2',
-                pushing: true
-            })
-    ;
+    // $('.ui.sticky')
+    //         .sticky({
+    //             context: '#example2',
+    //             pushing: true
+    //         })
+    // ;
+
+    var menu;
+    var height;
+    var thing;
+    var scroll = 0;
+    var offset = 65;
+    $(window).ready(function(){
+      menu = $('#top-menu');
+      thing = $('#cust-sticky');
+      thing.css('position','absolute');
+      height = menu.height();
+      //offset = $('#search-bar').position().top;
+      thing.css('top',(height - offset)+'px');
+      var fun = function(){
+          height = menu.height();
+          if($(window).scrollTop < height - offset){
+            thing.css('top',(height - offset)+'px');
+          }
+      };
+
+      $(window).resize(fun);
+
+      $(window).scroll(function(event){
+        var scrolltop = $(window).scrollTop();
+        if(scrolltop > height - offset){
+          thing.css('top',(scrolltop - offset + 40)+'px');
+        }else{
+          thing.css('top',(height - offset)+'px');
+        }
+      });
+    });
 
 </script>
 
