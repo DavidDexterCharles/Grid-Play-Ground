@@ -5,3 +5,10 @@ A Pen created at CodePen.io. You can find this one at http://codepen.io/ICE-WOLF
 Please note you must include the jquery.address script.
 
 Forked from [Justin](http://codepen.io/jwarnes/)'s Pen [Semantic UI - Tabs](http://codepen.io/jwarnes/pen/BvbgF/).
+
+
+#More Links
+
+>http://semantic-ui.com/modules/tab.html#/usage
+
+>https://cdnjs.com/libraries/semantic-ui
